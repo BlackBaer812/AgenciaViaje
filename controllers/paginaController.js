@@ -1,4 +1,4 @@
-import {viaje} from "../Models/viaje.js"
+import {viaje} from "../models/viaje.js"
 import {testimonio} from "../models/testimonio.js"
 import moment from "moment"
 
