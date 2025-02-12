@@ -85,19 +85,25 @@ const paginaViaje = async (req, res) => {
 
 const paginaTestimonios = async (req, res) => {
 
+    const promiseDB=[];
+
+    promiseDB.push(viaje.findAll());
+
+    promiseDB.push(testimonio.findAll({
+        limit: 3,
+        order: [["Id", "DESC"]],
+    }));
+
     try{
-        const testi = await testimonio.findAll({
-            limit: 3,
-            order: [["Id", "DESC"]],
-        });
+        const resultado = await Promise.all(promiseDB);
 
-
-    const titulo = "Testimonios"
-    res.render("testimonios",{
-        titulo,
-        testimonios: testi,
-        moment: moment,
-    })
+        const titulo = "Testimonios"
+        res.render("testimonios",{
+            titulo,
+            testimonios: resultado[1],
+            viajes: resultado[0],
+            moment: moment,
+        })
     }catch (err){
         console.log(err);
     }
@@ -121,7 +127,18 @@ const paginaDestallesViajes = async (req, res) => {
 }
 
 const guardarTestimonios = async (req,res) => {
-    const {nombre, correo, mensaje} = req.body;
+    const {nombre, correo, mensaje, viaj} = req.body;
+
+    const promiseDB=[];
+
+    promiseDB.push(viaje.findAll());
+
+    promiseDB.push(testimonio.findAll({
+        limit: 3,
+        order: [["Id", "DESC"]],
+    }));
+
+    console.log(viaj)
 
     const errores = [];
 
@@ -134,20 +151,33 @@ const guardarTestimonios = async (req,res) => {
     if (mensaje.trim()===''){
         errores.push({mensaje: 'El mensaje está vacío'});
     }
+    if(viaj===''){
+        errores.push({mensaje: 'El viaje está vacío'});
+    }
 
     if (errores.length>0){ //Debemos volver a la vista y mostrar los errores
-        res.render('testimonios', {
-            titulo: 'Testimonios',
-            errores: errores,
-            nom: nombre,
-            correo: correo,
-            mensaje: mensaje,
-            moment: moment,
-        })
+        try{
+            const resultado = await Promise.all(promiseDB);
+            res.render('testimonios', {
+                titulo: 'Testimonios',
+                errores: errores,
+                nom: nombre,
+                correo: correo,
+                mensaje: mensaje,
+                viaje: viaj,
+                moment: moment,
+                viajes: resultado[0],
+                testimonios: resultado[1],
+            })
+
+        }catch (err){
+            console.error(err);
+        }
+
     }else{//Almacenar el mensaje en la BBDD
         try{
 
-            await testimonio.create({nombre: nombre, correoelectronico: correo,mensaje: mensaje,});
+            await testimonio.create({nombre: nombre, correoelectronico: correo,mensaje: mensaje,viajeId: viaj});
             res.redirect('/testimonios'); //Guardo en la base de datos y lo envío a la misma vista
         }catch(error){
             console.log(error);

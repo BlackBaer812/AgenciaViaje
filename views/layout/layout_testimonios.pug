@@ -1,10 +1,13 @@
 .row.testimonios
-    each testimonio in testimonios
-        .col-md-6.col-lg-4.mb-4
-            .card.shadow-lg.border-light
-                .card-body
-                    blockquote.blockquote
-                        p.mb-0.text-center
-                            | "#{testimonio.mensaje}"
-                    footer.blockquote-footer.text-right
-                        | — #{testimonio.nombre}
+    if(testimonios.length!==0)
+        each testimonio in testimonios
+            .col-md-6.col-lg-4.mb-4
+                .card.shadow-lg.border-light
+                    .card-body
+                        blockquote.blockquote
+                            p.mb-0.text-center
+                                | "#{testimonio.mensaje}"
+                        footer.blockquote-footer.text-right
+                            | — #{testimonio.nombre}
+                    .card-footer
+                        p.text-center #{viajes[testimonio.viajeId-1].titulo}

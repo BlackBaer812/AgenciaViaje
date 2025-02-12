@@ -28,5 +28,14 @@ block contenido
                         .form-group
                             label(style="font-weight: bold;", for="mensaje") Mensaje
                             textarea#mensaje(class="form-control", name="mensaje", placeholder="Tu Mensaje", rows=3)=mensaje
+                        .form-group
+                            .row
+                                .col-12
+                                    label(style="font-weight: bold;", for="viaj") Viajes
+                            .row
+                                .col-12
+                                    select.form-select(name="viaj" id="viaj")
+                                        each viaje in viajes
+                                            option(value=viaje.id) #{viaje.titulo}
 
                         input.btn.btn-success.btn-block(type="submit")
