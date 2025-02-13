@@ -36,4 +36,7 @@ block contenido
 
     .container
         h2.mt-5.text-center VIAJES
-        include ./layout/layout_viaje
+            .row.proximos-viajes
+                each viaje in viajes
+                    if viaje.id > viajes.length-3
+                        include ./layout/layout_viaje

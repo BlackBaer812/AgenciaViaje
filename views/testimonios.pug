@@ -20,15 +20,6 @@ block contenido
                 .col-md-8
                     form(action="/testimonios" method="POST")
                         .form-group
-                            label(style="font-weight: bold;", for="nombre") Nombre
-                            input#nombre(type="text", placeholder="Tu nombre", name="nombre", class="form-control", value=nom)
-                        .form-group
-                            label(style="font-weight: bold;", for="correo") Correo Electrónico
-                            input#correo(type="text", placeholder="Tu correo electrónico", name="correo", class="form-control", value=correo)
-                        .form-group
-                            label(style="font-weight: bold;", for="mensaje") Mensaje
-                            textarea#mensaje(class="form-control", name="mensaje", placeholder="Tu Mensaje", rows=3)=mensaje
-                        .form-group
                             .row
                                 .col-12
                                     label(style="font-weight: bold;", for="viaj") Viajes
@@ -37,5 +28,14 @@ block contenido
                                     select.form-select(name="viaj" id="viaj")
                                         each viaje in viajes
                                             option(value=viaje.id) #{viaje.titulo}
+                        .form-group
+                            label(style="font-weight: bold;", for="nombre") Nombre
+                            input#nombre(type="text", placeholder="Tu nombre", name="nombre", class="form-control", value=nom)
+                        .form-group
+                            label(style="font-weight: bold;", for="correo") Correo Electrónico
+                            input#correo(type="text", placeholder="Tu correo electrónico", name="correo", class="form-control", value=correo)
+                        .form-group
+                            label(style="font-weight: bold;", for="mensaje") Mensaje
+                            textarea#mensaje(class="form-control", name="mensaje", placeholder="Tu Mensaje", rows=3)=mensaje
 
                         input.btn.btn-success.btn-block(type="submit")
