@@ -161,7 +161,7 @@ const guardarTestimonios = async (req,res) => {
                 nom: nombre,
                 correo: correo,
                 mensaje: mensaje,
-                viaje: viaj,
+                viaj: viaj,
                 moment: moment,
                 viajes: resultado[0],
                 testimonios: resultado[1],
