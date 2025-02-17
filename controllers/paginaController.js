@@ -7,10 +7,7 @@ import moment from "moment"
 const paginaInicio = async(req, res) => {
     const promiseDB=[];
 
-    promiseDB.push(viaje.findAll({
-        limit: 3,
-        order:[["Id","DESC"]],
-    }));
+    promiseDB.push(viaje.findAll());
 
     promiseDB.push(testimonio.findAll({
         limit: 3,
@@ -164,7 +161,7 @@ const guardarTestimonios = async (req,res) => {
                 nom: nombre,
                 correo: correo,
                 mensaje: mensaje,
-                viaje: viaj,
+                viaj: viaj,
                 moment: moment,
                 viajes: resultado[0],
                 testimonios: resultado[1],
