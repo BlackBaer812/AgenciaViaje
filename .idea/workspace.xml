@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7020158d-9d74-4e51-9281-0103775003a0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/paginaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/paginaController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/layout_testimonios.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/layout_testimonios.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/testimonios.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/testimonios.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +51,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;development&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/Desktop/ProyectoServidorCliente&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/Desktop/agenciaviajes/public/scripts&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -64,6 +63,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\usuario\Desktop\agenciaviajes\public\scripts" />
+      <recent name="C:\Users\usuario\Desktop\agenciaviajes\public\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\usuario\Desktop\agenciaviajes" />
     </key>
@@ -103,7 +106,10 @@
       <workItem from="1739349548710" duration="42000" />
       <workItem from="1739383901897" duration="2288000" />
       <workItem from="1739517444000" duration="132000" />
-      <workItem from="1739524543931" duration="2862000" />
+      <workItem from="1739524543931" duration="5273000" />
+      <workItem from="1739530040438" duration="98000" />
+      <workItem from="1739783634764" duration="2885000" />
+      <workItem from="1739796223605" duration="1030000" />
     </task>
     <servers />
   </component>

@@ -32,12 +32,12 @@ block contenido
                             .col-12
                                 .form-group.mb-3
                                     label(style="font-weight: bold;", for='viaj') Viajes
-                                    select#viaj.w-100.mb-3.form-select(name='viaj' value=viaj)
+                                    select#viaj.w-100.mb-3.form-select.rounded-pill(name='viaj' value=viaj)
                                         option(value="")
                                         each viaje in viajes
                                             option(value=viaje.id selected=(viaje.id==viaj)) #{viaje.titulo}
                         .row
-                            .col-12
+                            .col-12.mb-2
                                 .form-group
                                     label(style="font-weight: bold;", for="mensaje") Mensaje
                                     textarea#mensaje(class="form-control", name="mensaje", placeholder="Tu Mensaje", rows=3)=mensaje
