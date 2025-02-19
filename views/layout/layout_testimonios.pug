@@ -9,5 +9,12 @@
                                 | "#{testimonio.mensaje}"
                         footer.blockquote-footer.text-right
                             | — #{testimonio.nombre}
-                    .card-footer
-                        p.text-center #{viajes[testimonio.viajeId-1].titulo}
+                    .card-footer.row
+                        .col
+                            p.text-center #{viajes[testimonio.viajeId-1].titulo}
+                        .col.d-flex.justify-content-end
+                            form(action="/borrarTestimonio" method="post")
+                                button.btn
+                                    input(type="hidden" name="destino" value=destino)
+                                    input(type="hidden" name="borrar" value=testimonio.id)
+                                    i.bi.bi-trash3
