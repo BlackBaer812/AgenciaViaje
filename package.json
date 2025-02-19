@@ -11,6 +11,7 @@
     "start": "index.js"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.11.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "moment": "^2.30.1",

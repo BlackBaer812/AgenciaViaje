@@ -27,7 +27,7 @@ export const testimonio = db.define("testimonio", {
             model: viaje,
             key: "id",
         },
-        onDelete: 'CASCADE', // Si se borra un viaje, también sus reservas
+        onDelete: 'CASCADE', // Si se borra un viaje, también sus testimonios
         onUpdate: 'CASCADE',
     }
 },{

@@ -24,6 +24,7 @@ const paginaInicio = async(req, res) => {
             viajes: resultado[0],
             testimonios: resultado[1],
             moment: moment,
+            destino: "index",
         });
 
     }catch(err){
@@ -100,6 +101,7 @@ const paginaTestimonios = async (req, res) => {
             testimonios: resultado[1],
             viajes: resultado[0],
             moment: moment,
+            destino: "testimonios",
         })
     }catch (err){
         console.log(err);
@@ -182,8 +184,46 @@ const guardarTestimonios = async (req,res) => {
     }
 }
 
+const borrarTestimonios = async (req, res) => {
+    const {borrar,destino} = req.body
+
+    try{
+        const result = await testimonio.destroy({where: {id: borrar}});
+    }
+    catch (err){
+        console.log(err)
+    }
+
+    const promiseDB=[];
+
+    promiseDB.push(viaje.findAll());
+
+    promiseDB.push(testimonio.findAll({
+        limit: 3,
+        order: [["Id", "DESC"]],
+    }));
+
+    console.log(borrar,destino);
+
+    try {
+        const resultado = await Promise.all(promiseDB);
+
+        await res.render(destino,{
+            titulo: "Información del viaje",
+            resultado,
+            moment: moment,
+            viajes: resultado[0],
+            testimonios: resultado[1],
+        })
+    }
+    catch (err){
+        console.log(err)
+    }
+}
+
 //Exporto para que lo pueda leer el router
 export{
+    borrarTestimonios,
     paginaInicio,
     paginaNosotros,
     paginaContactos,
