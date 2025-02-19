@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7020158d-9d74-4e51-9281-0103775003a0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/paginaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/paginaController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/testimonio.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/testimonio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/layout_testimonios.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/layout_testimonios.pug" afterDir="false" />
-    </list>
+    <list default="true" id="7020158d-9d74-4e51-9281-0103775003a0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +107,7 @@
       <workItem from="1739783634764" duration="2885000" />
       <workItem from="1739796223605" duration="1030000" />
       <workItem from="1739811162619" duration="286000" />
-      <workItem from="1739950154232" duration="5204000" />
+      <workItem from="1739950154232" duration="5486000" />
     </task>
     <servers />
   </component>
