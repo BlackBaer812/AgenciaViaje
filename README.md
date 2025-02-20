@@ -21,6 +21,8 @@ Viajes y la de Testimonios.
 
 2. Al mostrar los testimonios, también se indicará a qué viaje pertenece cada uno.
 
+3. Se permite la eliminación de comentarios, esta eliminación te devuelve la pagina en la que te encontrabas
+
 ---
 
 ## **Tecnologías utilizadas**
